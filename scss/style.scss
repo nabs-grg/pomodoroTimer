@@ -1,35 +1,41 @@
 // colors
-
-$black: #000;
-$white: #fff;
+$padding-standard: 20px;
 $red: #af272f;
-$blue: #282832;
 $cream: #F2EFEB;
-$cream2: #F2EFEB - 100;
 
-
-
-.grad {
-	background-color : $cream;
-	background-image : -webkit-gradient(linear, left top, eft bottom, from($cream), to($cream2));
-	background-image : -webkit-linear-gradient(top, $cream, $cream2);
-	background-image : -moz-linear-gradient(top, $cream, $cream2);
-	background-image : -ms-linear-gradient(top, $cream, $cream2);
-	background-image : -o-linear-gradient(top, $cream, $cream2);
-	height : 500px;
-	#hello {
-	color : $red;
-	font-size : 25px;
-	font-style : bold;
+div {
+    display: block;
 }
+
+#navbar-pomodoro {
+	padding-bottom: $padding-standard;
+	padding-top: $padding-standard; 
 }
 
 p {
 	color: $red;
 }
 
-#square {
-	width: 200px;
-	height: 200px;
-	background-color: $cream;
+p.footer-text {
+	color: black;
 }
+
+.footer {
+  position: absolute;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+p#timer {
+	font-size: 100px;
+}
+
+.panel-key-shortcut {
+	position: relative;
+	background-color: #eceeef;
+    padding: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
