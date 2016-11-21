@@ -3,7 +3,34 @@ div {
 
 #navbar-pomodoro {
   padding-bottom: 20px;
-  padding-top: 20px; }
+  padding-top: 20px;
+  background-color: #eceff1; }
+
+#title {
+  font-color: black; }
+
+#navbar-componenet {
+  position: relative;
+  left: 700px;
+  background-color: #b0bec5;
+  border-radius: 7px; }
+
+a#home {
+  border: 1px solid #0277bd;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 7px 0 0 7px; }
+
+a#settings {
+  border: 1px solid #0277bd;
+  padding-bottom: 10px;
+  padding-top: 10px; }
+
+a#about {
+  border: 1px solid #0277bd;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 0 7px 7px 0; }
 
 p {
   color: #af272f; }
@@ -11,20 +38,84 @@ p {
 p.footer-text {
   color: black; }
 
-.footer {
+p#time {
+  position: relative;
+  font-size: 150px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  text-align: center; }
+
+#timer-header {
+  position: relative;
+  margin-left: 29%;
+  margin-right: auto;
+  padding-bottom: 20px; }
+
+a#pomodoro.button {
+  border: 1px solid #0277bd;
+  padding: 10px 20px 10px 20px;
+  background-color: #33b5e5; }
+
+a#short-break.button {
+  border: 1px solid #0277bd;
+  padding: 10px 20px 10px 20px;
+  background-color: #33b5e5; }
+
+a#long-break.button {
+  border: 1px solid #0277bd;
+  padding: 10px 20px 10px 20px;
+  background-color: #33b5e5; }
+
+a#custom-break.button {
+  border: 1px solid #0277bd;
+  padding: 10px 20px 10px 20px;
+  background-color: #33b5e5; }
+
+.center-button {
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  left: 38%;
+  right: auto; }
+
+#start-timer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px 0 0; }
+
+#stop-timer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 10px 0 10px; }
+
+#reset-timer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 0px 0 10px; }
+
+.keyboard-panel {
+  background-color: #eceeef;
   position: absolute;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  left: 36.5%; }
+
+.footer {
+  position: relative;
   /* Set the fixed height of the footer here */
+  top: 350px;
   height: 60px;
   background-color: #f5f5f5; }
 
-p#time {
-  font-size: 100px; }
-
-.panel-key-shortcut {
-  position: relative;
-  background-color: #eceeef;
-  padding: 40px;
-  margin-bottom: 20px;
-  margin-top: 20px; }
+#footer-text {
+  font-size: 14px;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
