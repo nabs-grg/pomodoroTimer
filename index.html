@@ -20,9 +20,45 @@
 			        </li>
 			        <li class="nav-item">
 			          	<a class="nav-link" id="settings" href="#">Settings</a>
+			          	<!-- The Modal -->
+						<div id="myModal-setting" class="modal">
+
+							<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close" id="close_setting">×</span>
+								<h2>Settings</h2>
+								<h3>Select Sound</h3>
+								<select>
+								    <option value="twinkle">Twinkle</option>
+								    <option value="chimes">Chimes</option>
+								    <option value="ripples">Ripples</option>
+								    <option value="waves">Waves</option>
+								</select>
+								<h3>Select Volume</h3>
+								<select>
+								    <option value="very low">Very Low</option>
+								    <option value="low">Low</option>
+								    <option value="medium">Medium</option>
+								    <option value="high">High</option>
+								    <option value="very high">Very High</option>
+								</select>
+							</div>
+
+						</div>
 			        </li>
 			        <li class="nav-item">
 			          	<a class="nav-link" id="about" href="#">About</a>
+						<!-- The Modal -->
+						<div id="myModal-about" class="modal">
+
+							<!-- Modal content -->
+							<div class="modal-content">
+								<span class="close" id="close_about">×</span>
+								<p class="modal-text">Q. What is Pomodoro Technique?</p>
+								<p class="modal-text">A. It is a time management technique created by Francesco Cirillo for a more productive way to work and study. For more information, <a class="modal-text" href="http://cirillocompany.de/pages/pomodoro-technique/" target="_blank">click here.</a></p>
+							</div>
+
+						</div>
 			        </li>
 			    </ul>
 		    </nav>
@@ -70,7 +106,7 @@
 
 	<footer class="footer">
       <div class="container">
-        <p class="text-muted" id="footer-text">POMODORO TIMER</p>
+        <p class="text-muted" id="footer-text">&copy; POMODORO TIMER</p>
       </div>
     </footer>
 	</div>

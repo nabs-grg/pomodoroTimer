@@ -1,7 +1,12 @@
+//Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+
+
+//Variables
 $padding-standard: 20px;
 $red: #af272f;
 $cream: #F2EFEB;
-//$default-font: 
+$primary-font: 'Open Sans';
 
 div {
     display: block;
@@ -15,6 +20,7 @@ div {
 
 #title {
   font-color: black;
+  font-family: $primary-font;
 }
 
 #navbar-componenet {
@@ -29,12 +35,14 @@ a#home {
   padding-bottom: 10px;
   padding-top: 10px;
   border-radius: 7px 0 0 7px;
+  font-family: $primary-font;
 }
 
 a#settings {
   border: 1px solid #0277bd;
   padding-bottom: 10px;
   padding-top: 10px;
+  font-family: $primary-font;
 }
 
 a#about {
@@ -42,6 +50,7 @@ a#about {
   padding-bottom: 10px;
   padding-top: 10px;
   border-radius: 0 7px 7px 0;
+  font-family: $primary-font;
 }
 
 p {
@@ -71,24 +80,28 @@ a#pomodoro.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
+  font-family: $primary-font;
 }
 
 a#short-break.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
+  font-family: $primary-font;
 }
 
 a#long-break.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
+  font-family: $primary-font;
 }
 
 a#custom-break.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
+  font-family: $primary-font;
 }
 
 .center-button {
@@ -105,6 +118,7 @@ a#custom-break.button {
   padding-left: $padding-standard;
   padding-right: $padding-standard;
   margin: 0 10px 0 0;
+  font-family: $primary-font;
 }
 
 #stop-timer {
@@ -113,6 +127,7 @@ a#custom-break.button {
   padding-left: $padding-standard;
   padding-right: $padding-standard;
   margin: 0 10px 0 10px;
+  font-family: $primary-font;
 }
 
 #reset-timer {
@@ -121,10 +136,12 @@ a#custom-break.button {
   padding-left: $padding-standard;
   padding-right: $padding-standard;
   margin: 0 0px 0 10px;
+  font-family: $primary-font;
 }
 
 .keyboard-panel {
   background-color: #eceeef;
+  font-family: $primary-font;
   position: absolute;
   padding: $padding-standard;
   margin-bottom: 20px;
@@ -141,6 +158,57 @@ a#custom-break.button {
 }
 
 #footer-text {
-  font-size: 14px;
+  font-size: 16px;
+  font-family: $primary-font;
   font-weight: bold;
 }
+
+/* modal for about */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Text Custom */
+
+.modal-text{
+  font-size: 18px;
+  font-family: $primary-font;
+  color: black;
+}
+

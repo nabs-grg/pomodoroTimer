@@ -69,4 +69,70 @@ $("#reset-timer").click(function(){
 	resetTime();
 });
 
+$("#short-break").on("click",function(){
+	$("#time").html("05:00");
+})
+
+$("#long-break").on("click",function(){
+	$("#time").html("10:00");
+})
+
+$("#custom-break").on("click",function(){
+	$("#time").html("00:00");
+})
+
+// Get the about modal
+var modal_about = document.getElementById('myModal-about');
+
+// Get the about modal
+var modal_setting = document.getElementById('myModal-setting');
+
+// Get the button that opens the about modal
+var btn_about = document.getElementById("about");
+
+// Get the button that opens the setting modal
+var btn_setting = document.getElementById("settings");
+
+// Get the <span> element that closes the modal
+var span_setting = document.getElementById("close_setting");
+
+// Get the <span> element that closes the modal
+var span_about = document.getElementById("close_about");
+
+// When the user clicks the button, open the modal
+btn_about.onclick = function() {
+    modal_about.style.display = "block";
+}
+
+//When the user clicks on <span> (x), close the modal
+span_about.onclick = function() {
+    modal_about.style.display = "none";
+    console.log("hello");
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal_about) {
+       modal_about.style.display = "none";
+    }
+}
+
+btn_setting.onclick = function() {
+	modal_setting.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span_setting.onclick = function() {
+   modal_setting.style.display = "none";
+   console.log("hello");
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal_setting) {
+      	modal_setting.style.display = "none";
+    }
+}
+
+
 
