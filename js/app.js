@@ -7,6 +7,8 @@ Start timer function consist of two parameters duration of the pomodoro time and
 function startTimer(duration, display){
 
 	var timer = duration, minutes, seconds;
+	//var timer = display;
+	console.log(duration)
 
 	t = setInterval(function(){
 
@@ -49,9 +51,28 @@ function resetTime(){
 //start timer
 
 $("#start-timer").click(function(){
-	var pomodoroMinutes = 60 * 25,
-    display = $('#time');
-    startTimer(pomodoroMinutes, display);
+	//var pomodoroMinutes = 60 * 25;
+	var getStopedTime = "" ;
+	var getCurrentTime = $("#time");
+     
+     var currentTime = getCurrentTime[0].innerHTML
+     
+     if(currentTime !== "25:00"){
+     	getStopedTime  = currentTime;
+     }else{
+     	
+     	getStopedTime  = currentTime;
+     }
+	
+	 display = $('#time');  
+    
+    /***************/
+     var hms = '00:' + getStopedTime;//00:25:00
+     var a = hms.split(':');//[0 , 0 ,2 ,5 ,0 ,0] console.log(a)
+     var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+	/***************/
+
+   startTimer(seconds, display);
 });
 
 //stop timer
