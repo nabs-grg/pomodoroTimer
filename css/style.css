@@ -52,7 +52,7 @@ p#time {
 
 #timer-header {
   position: relative;
-  margin-left: 29%;
+  margin-left: 35%;
   margin-right: auto;
   padding-bottom: 20px; }
 
@@ -82,7 +82,7 @@ a#custom-break.button {
 
 .center-button {
   position: relative;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-bottom: 50px;
   left: 38%;
   right: auto; }

@@ -7,7 +7,7 @@ Start timer function consist of two parameters duration of the pomodoro time and
 function startTimer(duration, display){
 
 	var timer = duration, minutes, seconds;
-	//var timer = display;
+
 	console.log(duration)
 
 	t = setInterval(function(){
@@ -51,28 +51,26 @@ function resetTime(){
 //start timer
 
 $("#start-timer").click(function(){
-	//var pomodoroMinutes = 60 * 25;
+	
 	var getStopedTime = "" ;
 	var getCurrentTime = $("#time");
      
-     var currentTime = getCurrentTime[0].innerHTML
+    var currentTime = getCurrentTime[0].innerHTML
      
-     if(currentTime !== "25:00"){
-     	getStopedTime  = currentTime;
-     }else{
-     	
-     	getStopedTime  = currentTime;
-     }
+ 	if(currentTime !== "25:00"){
+ 		getStopedTime  = currentTime;
+ 	}else{
+ 		getStopedTime  = currentTime;
+ 	}
 	
-	 display = $('#time');  
+	display = $('#time');  
     
-    /***************/
-     var hms = '00:' + getStopedTime;//00:25:00
-     var a = hms.split(':');//[0 , 0 ,2 ,5 ,0 ,0] console.log(a)
-     var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
-	/***************/
+    var hms = '00:' + getStopedTime;//00:25:00 
+    var a = hms.split(':');//["00","25 ","00"] 
+    var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);//1500
 
-   startTimer(seconds, display);
+   	startTimer(seconds, display);
+
 });
 
 //stop timer
@@ -138,6 +136,7 @@ window.onclick = function(event) {
     }
 }
 
+//When the user clicks the selected modal opens
 btn_setting.onclick = function() {
 	modal_setting.style.display = "block";
 }
@@ -154,6 +153,78 @@ window.onclick = function(event) {
       	modal_setting.style.display = "none";
     }
 }
+
+$("#reset-timer").keypress(function(e){
+	if(e.which == 13){
+   		
+   	
+   		console.log("hello world")
+   	}
+    
+});
+
+//setting variable isAlt to false
+var isAlt = false;
+
+//when key is pressed up set the alt to false
+$(document).keyup(function (e) {
+  	if (e.which == 18) isAlt = false;
+	}).keydown(function (e) {
+	 
+	//setting the ALT key to true on key down event handler
+	if (e.which == 18) isAlt = true;
+
+	//ALT + R to reset the timer
+	if (e.which == 82 && isAlt == true) {
+    	resetTime();
+  	}
+
+  	//ALT + P to set the pomodoro timer
+  	if (e.which == 80 && isAlt == true) {
+    	resetTime();
+  	}
+
+  	//ALT + S to set the timer to 5 minutes break
+  	if (e.which == 83 && isAlt == true) {
+    	$("#time").html("05:00");
+  	}
+
+  	//ALT + L to set the timer to 10 minutes break
+  	if (e.which == 76 && isAlt == true) {
+    	$("#time").html("10:00");
+  	}
+
+  	//SPACE to start the timer
+  	if(e.which == 32) {
+  		
+  		var getStopedTime = "" ;
+		var getCurrentTime = $("#time");
+	     
+	    var currentTime = getCurrentTime[0].innerHTML
+	     
+	 	if(currentTime !== "25:00"){
+	 		getStopedTime  = currentTime;
+	 	}else{
+	 		getStopedTime  = currentTime;
+	 	}
+		
+		display = $('#time');  
+	    
+	    /***************/
+	     var hms = '00:' + getStopedTime;//00:25:00
+	     var a = hms.split(':');//[0 , 0 ,2 ,5 ,0 ,0] console.log(a)
+	     var seconds = (+a[0]) * 60 * 60 + (+a[1]) * 60 + (+a[2]);
+		/***************/
+
+	   	startTimer(seconds, display);
+
+  	}
+
+  	//ENTER to pause the timer
+  	if(e.which == 13){
+  		clearInterval(t);
+  	}
+});
 
 
 
