@@ -11,9 +11,10 @@ div {
   font-color: black;
   font-family: "Open Sans"; }
 
-#navbar-componenet {
+.navbar .nav.pull-right {
+  float: right;
+  margin-right: 20px;
   position: relative;
-  left: 700px;
   background-color: #b0bec5;
   border-radius: 7px; }
 
@@ -21,7 +22,6 @@ a#home {
   border: 1px solid #0277bd;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-radius: 7px 0 0 7px;
   font-family: "Open Sans"; }
 
 a#settings {
@@ -34,7 +34,6 @@ a#about {
   border: 1px solid #0277bd;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-radius: 0 7px 7px 0;
   font-family: "Open Sans"; }
 
 p {
@@ -43,13 +42,16 @@ p {
 p.footer-text {
   color: black; }
 
-p#time {
+.timer-official {
   position: relative;
   font-size: 150px;
   margin-bottom: 0px;
   margin-top: 50px;
   text-align: center; }
 
+@media only screen and (max-width: 480px) {
+  .timer-official {
+    font-size: 70px; } }
 #timer-header {
   position: relative;
   margin-left: 35%;
@@ -69,12 +71,6 @@ a#short-break.button {
   font-family: "Open Sans"; }
 
 a#long-break.button {
-  border: 1px solid #0277bd;
-  padding: 10px 20px 10px 20px;
-  background-color: #33b5e5;
-  font-family: "Open Sans"; }
-
-a#custom-break.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;

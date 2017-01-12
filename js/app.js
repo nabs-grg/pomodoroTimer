@@ -88,16 +88,19 @@ $("#reset-timer").click(function(){
 	resetTime();
 });
 
+//05:00
 $("#short-break").on("click",function(){
 	$("#time").html("05:00");
 })
 
+//10:00
 $("#long-break").on("click",function(){
 	$("#time").html("10:00");
 })
 
-$("#custom-break").on("click",function(){
-	$("#time").html("00:00");
+//Promodoro Timer 25:00
+$("#pomodoro").on("click",function(){
+	$("#time").html("25:00");
 })
 
 // Get the about modal

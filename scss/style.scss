@@ -1,6 +1,13 @@
 //Google Fonts
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
 
+//mixin for media query
+@mixin phone {
+  @media only screen and (max-width: 480px) {
+    @content;
+  }
+}
+
 //Variables
 $padding-standard: 20px;
 $red: #af272f;
@@ -22,9 +29,10 @@ div {
   font-family: $primary-font;
 }
 
-#navbar-componenet {
+.navbar .nav.pull-right {
+  float: right;
+  margin-right: $padding-standard; 
   position: relative;
-  left: 700px;
   background-color: #b0bec5;
   border-radius: 7px;
 }
@@ -33,7 +41,7 @@ a#home {
   border: 1px solid #0277bd;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-radius: 7px 0 0 7px;
+  //border-radius: 7px 0 0 7px;
   font-family: $primary-font;
 }
 
@@ -48,7 +56,7 @@ a#about {
   border: 1px solid #0277bd;
   padding-bottom: 10px;
   padding-top: 10px;
-  border-radius: 0 7px 7px 0;
+  //border-radius: 0 7px 7px 0;
   font-family: $primary-font;
 }
 
@@ -60,12 +68,18 @@ p.footer-text {
 	color: black;
 }
 
-p#time {
+.timer-official {
   position: relative;
 	font-size: 150px;
   margin-bottom: 0px;
   margin-top: 50px;
   text-align: center;
+}
+
+@include phone {
+  .timer-official {
+      font-size: 70px;
+    }
 }
 
 #timer-header {
@@ -90,13 +104,6 @@ a#short-break.button {
 }
 
 a#long-break.button {
-  border: 1px solid #0277bd;
-  padding: 10px 20px 10px 20px;
-  background-color: #33b5e5;
-  font-family: $primary-font;
-}
-
-a#custom-break.button {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
@@ -210,4 +217,3 @@ a#custom-break.button {
   font-family: $primary-font;
   color: black;
 }
-
