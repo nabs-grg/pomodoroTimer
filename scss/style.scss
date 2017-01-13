@@ -8,6 +8,24 @@
   }
 }
 
+@mixin large-screen {
+  @media only screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media only screen and (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media only screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 //Variables
 $padding-standard: 20px;
 $red: #af272f;
@@ -80,42 +98,81 @@ p.footer-text {
   .timer-official {
       font-size: 70px;
     }
+
+  .btn-time {
+      display: inline-block;
+    }
 }
 
-#timer-header {
-  position: relative;
-  margin-left: 35%;
-  margin-right: auto;
-  padding-bottom: $padding-standard;
-}
+// #timer-header {
+//   position: relative;
+//   margin-left: 35%;
+//   margin-right: auto;
+//   padding-bottom: $padding-standard;
+// }
 
-a#pomodoro.button {
+#pomodoro {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: $primary-font;
 }
 
-a#short-break.button {
+#short-break {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: $primary-font;
 }
 
-a#long-break.button {
+#long-break {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: $primary-font;
+}
+
+ul.btn-time {
+  width: 100%;
+    text-align: center;
+    > li {
+      float: none;
+      display: inline-block;
+    }
 }
 
 .center-button {
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 50px;
   left: 38%;
   right: auto;
+}
+
+@include large-screen {
+  .center-button {
+    left: 36%;
+  }
+}
+
+@include medium-screen {
+  .center-button {
+    left: 36%;
+  }
+}
+
+@include small-screen {
+  .center-button {
+    left: 30%;
+  }
+}
+
+@include phone {
+  
+  .center-button {
+    left: 18%;
+  }
+
 }
 
 #start-timer {
@@ -146,21 +203,33 @@ a#long-break.button {
 }
 
 .keyboard-panel {
-  background-color: #eceeef;
-  font-family: $primary-font;
-  position: absolute;
-  padding: $padding-standard;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  left:36.5%;
+  // background-color: #eceeef;
+  // font-family: $primary-font;
+  // position: absolute;
+  // padding: $padding-standard;
+  // margin-bottom: 20px;
+  // margin-top: 140px;
+  // text-align: center;
+  // left:36.5%;
+
+    width: 320px;
+    height: 250px;
+    background-color: #eceeef;
+    padding: $padding-standard;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+
 }
 
 .footer {
   position: relative;
   /* Set the fixed height of the footer here */
-  top: 350px;
+  top: 288px;
   height: 60px;
   background-color: #f5f5f5;
+  margin-top: 100px;
 }
 
 #footer-text {
@@ -217,3 +286,5 @@ a#long-break.button {
   font-family: $primary-font;
   color: black;
 }
+
+

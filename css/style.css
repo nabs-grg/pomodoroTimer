@@ -51,38 +51,54 @@ p.footer-text {
 
 @media only screen and (max-width: 480px) {
   .timer-official {
-    font-size: 70px; } }
-#timer-header {
-  position: relative;
-  margin-left: 35%;
-  margin-right: auto;
-  padding-bottom: 20px; }
+    font-size: 70px; }
 
-a#pomodoro.button {
+  .btn-time {
+    display: inline-block; } }
+#pomodoro {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: "Open Sans"; }
 
-a#short-break.button {
+#short-break {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: "Open Sans"; }
 
-a#long-break.button {
+#long-break {
   border: 1px solid #0277bd;
   padding: 10px 20px 10px 20px;
   background-color: #33b5e5;
   font-family: "Open Sans"; }
+
+ul.btn-time {
+  width: 100%;
+  text-align: center; }
+  ul.btn-time > li {
+    float: none;
+    display: inline-block; }
 
 .center-button {
   position: relative;
-  margin-top: 60px;
+  margin-top: 50px;
   margin-bottom: 50px;
   left: 38%;
   right: auto; }
 
+@media only screen and (max-width: 1199px) {
+  .center-button {
+    left: 36%; } }
+@media only screen and (max-width: 991px) {
+  .center-button {
+    left: 36%; } }
+@media only screen and (max-width: 767px) {
+  .center-button {
+    left: 30%; } }
+@media only screen and (max-width: 480px) {
+  .center-button {
+    left: 18%; } }
 #start-timer {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -108,20 +124,22 @@ a#long-break.button {
   font-family: "Open Sans"; }
 
 .keyboard-panel {
+  width: 320px;
+  height: 250px;
   background-color: #eceeef;
-  font-family: "Open Sans";
-  position: absolute;
   padding: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  left: 36.5%; }
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto; }
 
 .footer {
   position: relative;
   /* Set the fixed height of the footer here */
-  top: 350px;
+  top: 288px;
   height: 60px;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  margin-top: 100px; }
 
 #footer-text {
   font-size: 16px;
